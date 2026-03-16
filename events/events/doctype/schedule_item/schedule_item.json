@@ -1,0 +1,82 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-03-17 02:57:30.458718",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "track",
+  "type",
+  "break_description",
+  "column_break_tmgc",
+  "talk",
+  "start_time",
+  "end_time"
+ ],
+ "fields": [
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Type",
+   "options": "Talk\nBreak"
+  },
+  {
+   "fieldname": "column_break_tmgc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "talk",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Talk",
+   "mandatory_depends_on": "eval:doc.type == \"Talk\"",
+   "options": "Event Talk"
+  },
+  {
+   "fieldname": "track",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Track",
+   "options": "Event Track",
+   "reqd": 1
+  },
+  {
+   "fieldname": "start_time",
+   "fieldtype": "Time",
+   "in_list_view": 1,
+   "label": "Start Time",
+   "reqd": 1
+  },
+  {
+   "fieldname": "end_time",
+   "fieldtype": "Time",
+   "in_list_view": 1,
+   "label": "End Time",
+   "reqd": 1
+  },
+  {
+   "fieldname": "break_description",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Break Description",
+   "mandatory_depends_on": "eval:doc.type != \"Talk\""
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-03-17 03:52:09.747186",
+ "modified_by": "Administrator",
+ "module": "Events",
+ "name": "Schedule Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
