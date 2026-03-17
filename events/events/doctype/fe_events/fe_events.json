@@ -143,8 +143,25 @@
  "grid_page_length": 50,
  "image_field": "banner_image",
  "index_web_pages_for_search": 1,
- "links": [],
- "modified": "2026-03-17 03:54:13.380128",
+ "links": [
+  {
+   "link_doctype": "Event Sponser",
+   "link_fieldname": "event"
+  },
+  {
+   "link_doctype": "Event Ticket Type",
+   "link_fieldname": "event"
+  },
+  {
+   "link_doctype": "Event Booking",
+   "link_fieldname": "event"
+  },
+  {
+   "link_doctype": "Event Ticket",
+   "link_fieldname": "event"
+  }
+ ],
+ "modified": "2026-03-18 01:56:53.850974",
  "modified_by": "Administrator",
  "module": "Events",
  "name": "FE Events",
