@@ -56,6 +56,7 @@
   {
    "fieldname": "user",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "User",
    "options": "User"
   },
@@ -88,7 +89,7 @@
    "link_fieldname": "booking"
   }
  ],
- "modified": "2026-03-18 03:55:47.509783",
+ "modified": "2026-05-29 01:21:59.317582",
  "modified_by": "Administrator",
  "module": "Ticketing",
  "name": "Event Booking",
@@ -103,6 +104,20 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Event Manager",
    "share": 1,
    "submit": 1,
    "write": 1

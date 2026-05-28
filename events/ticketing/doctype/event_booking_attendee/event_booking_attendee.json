@@ -24,6 +24,7 @@
    "fieldname": "email",
    "fieldtype": "Data",
    "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Email",
    "reqd": 1
   },
@@ -31,6 +32,7 @@
    "fieldname": "ticket_type",
    "fieldtype": "Link",
    "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Ticket Type",
    "options": "Event Ticket Type",
    "reqd": 1
@@ -58,7 +60,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2026-03-18 03:32:13.839126",
+ "modified": "2026-05-29 01:20:30.331572",
  "modified_by": "Administrator",
  "module": "Ticketing",
  "name": "Event Booking Attendee",

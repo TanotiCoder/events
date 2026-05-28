@@ -8,7 +8,8 @@
   "attendee_name",
   "event",
   "ticket_type",
-  "booking"
+  "booking",
+  "amended_from"
  ],
  "fields": [
   {
@@ -38,12 +39,23 @@
    "fieldtype": "Data",
    "label": "Attendee Name",
    "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Event Ticket",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
+ "is_submittable": 1,
  "links": [],
- "modified": "2026-03-18 04:14:29.078894",
+ "modified": "2026-05-29 01:18:00.792036",
  "modified_by": "Administrator",
  "module": "Events",
  "name": "Event Ticket",
