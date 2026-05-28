@@ -7,9 +7,11 @@
  "field_order": [
   "attendee_name",
   "event",
+  "amended_from",
+  "column_break_xizo",
   "ticket_type",
   "booking",
-  "amended_from"
+  "qr_code"
  ],
  "fields": [
   {
@@ -49,13 +51,24 @@
    "print_hide": 1,
    "read_only": 1,
    "search_index": 1
+  },
+  {
+   "fieldname": "column_break_xizo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "qr_code",
+   "fieldtype": "Attach Image",
+   "label": "QR code",
+   "read_only": 1
   }
  ],
  "grid_page_length": 50,
+ "image_field": "qr_code",
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-05-29 01:18:00.792036",
+ "modified": "2026-05-29 03:33:12.303012",
  "modified_by": "Administrator",
  "module": "Events",
  "name": "Event Ticket",
