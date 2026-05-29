@@ -87,7 +87,7 @@
  "image_field": "display_image",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-05-29 01:08:02.296415",
+ "modified": "2026-05-29 22:48:04.021668",
  "modified_by": "Administrator",
  "module": "Events",
  "name": "Speaker Profile",
@@ -119,6 +119,7 @@
    "write": 1
   }
  ],
+ "quick_entry": 1,
  "row_format": "Dynamic",
  "rows_threshold_for_grid_search": 20,
  "sort_field": "modified",

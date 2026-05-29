@@ -1,56 +1,64 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2026-03-17 04:10:38.422786",
+ "creation": "2026-05-29 04:24:03.831848",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "company_name",
-  "logo",
-  "column_break_gcrd",
   "event",
+  "company_name",
+  "company_logo",
+  "column_break_wviw",
+  "status",
   "tier"
  ],
  "fields": [
   {
-   "fieldname": "logo",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Review Pending\nShortlisted\nApproved\nRejected"
+  },
+  {
+   "fieldname": "company_logo",
    "fieldtype": "Attach Image",
-   "label": "Logo"
-  },
-  {
-   "fieldname": "column_break_gcrd",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "event",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "Event",
-   "options": "FE Events",
+   "label": "Company Logo",
    "reqd": 1
   },
   {
    "fieldname": "company_name",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Company Name",
    "reqd": 1
   },
   {
+   "fieldname": "column_break_wviw",
+   "fieldtype": "Column Break"
+  },
+  {
    "fieldname": "tier",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Tier",
    "options": "Sponsorship Tier",
    "reqd": 1
+  },
+  {
+   "fieldname": "event",
+   "fieldtype": "Link",
+   "label": "Event",
+   "options": "FE Events"
   }
  ],
  "grid_page_length": 50,
- "image_field": "logo",
+ "image_field": "company_logo",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-05-29 22:51:30.764717",
+ "modified": "2026-05-29 22:20:24.773030",
  "modified_by": "Administrator",
- "module": "Events",
- "name": "Event Sponser",
+ "module": "Proposals",
+ "name": "Sponsorship Proposal",
  "owner": "Administrator",
  "permissions": [
   {
@@ -66,13 +74,11 @@
    "write": 1
   }
  ],
- "quick_entry": 1,
  "row_format": "Dynamic",
  "rows_threshold_for_grid_search": 20,
  "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
- "title_field": "company_name",
- "track_changes": 1
+ "title_field": "company_name"
 }

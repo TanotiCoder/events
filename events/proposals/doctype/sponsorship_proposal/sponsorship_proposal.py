@@ -5,7 +5,7 @@
 from frappe.model.document import Document
 
 
-class EventTicketType(Document):
+class SponsorshipProposal(Document):
 	# begin: auto-generated types
 	# This code is auto-generated. Do not modify anything in this block.
 
@@ -14,10 +14,10 @@ class EventTicketType(Document):
 	if TYPE_CHECKING:
 		from frappe.types import DF
 
-		currency: DF.Link | None
-		event: DF.Link
-		name: DF.Int | None
-		price: DF.Currency
-		title: DF.Data | None
+		company_logo: DF.AttachImage
+		company_name: DF.Data
+		event: DF.Link | None
+		status: DF.Literal["Review Pending", "Shortlisted", "Approved", "Rejected"]
+		tier: DF.Link
 	# end: auto-generated types
 	pass
