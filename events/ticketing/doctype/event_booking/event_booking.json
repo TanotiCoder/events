@@ -89,7 +89,7 @@
    "link_fieldname": "booking"
   }
  ],
- "modified": "2026-05-29 01:21:59.317582",
+ "modified": "2026-05-30 02:32:18.458548",
  "modified_by": "Administrator",
  "module": "Ticketing",
  "name": "Event Booking",
@@ -128,5 +128,6 @@
  "search_fields": "event,total_amount",
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "user"
 }

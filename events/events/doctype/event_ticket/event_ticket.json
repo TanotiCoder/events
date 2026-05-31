@@ -11,7 +11,8 @@
   "column_break_xizo",
   "ticket_type",
   "booking",
-  "qr_code"
+  "qr_code",
+  "add_on"
  ],
  "fields": [
   {
@@ -61,6 +62,12 @@
    "fieldtype": "Attach Image",
    "label": "QR code",
    "read_only": 1
+  },
+  {
+   "fieldname": "add_on",
+   "fieldtype": "Table",
+   "label": "Add ons",
+   "options": "Ticket Add-on Value"
   }
  ],
  "grid_page_length": 50,
@@ -68,7 +75,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-05-29 03:33:12.303012",
+ "modified": "2026-05-30 03:17:55.659353",
  "modified_by": "Administrator",
  "module": "Events",
  "name": "Event Ticket",

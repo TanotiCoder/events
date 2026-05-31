@@ -5,48 +5,48 @@ import frappe
 from frappe.model.document import Document
 
 
-class EventBooking(Document):
-    # begin: auto-generated types
-    # This code is auto-generated. Do not modify anything in this block.
+class EventTicket(Document):
+	# begin: auto-generated types
+	# This code is auto-generated. Do not modify anything in this block.
 
-    from typing import TYPE_CHECKING
+	from typing import TYPE_CHECKING
 
-    if TYPE_CHECKING:
-        from events.ticketing.doctype.event_booking_attendee.event_booking_attendee import EventBookingAttendee
-        from frappe.types import DF
+	if TYPE_CHECKING:
+		from frappe.types import DF
 
-        amended_from: DF.Link | None
-        attendee: DF.Table[EventBookingAttendee]
-        currancy: DF.Link | None
-        event: DF.Link
-        total_amount: DF.Currency
-        user: DF.Link | None
-    # end: auto-generated types
-    pass
+		from events.ticketing.doctype.ticket_add_on_value.ticket_add_on_value import TicketAddonValue
 
-    def validate(self):
-        self.set_total()
-        self.set_currency()
+		add_ons: DF.Table[TicketAddonValue]
+		amended_from: DF.Link | None
+		attendee_name: DF.Data
+		booking: DF.Link | None
+		event: DF.Link
+		qr_code: DF.AttachImage | None
+		ticket_type: DF.Link
+	# end: auto-generated types
 
-    def set_total(self):
-        total = 0
-        for attendee in self.attendee:
-            total += attendee.amount
-        self.total_amount = total
+	def before_submit(self):
+		self.generate_qr_code()
 
-    def set_currency(self):
-        if self.attendee and self.attendee[0].currency:
-            self.currancy = self.attendee[0].currency
-    
-    def on_submit(self):
-        self.generate_tickets()
-    
-    def generate_tickets(self):
-        for attendee in self.attendee:
-            ticket = frappe.new_doc("Event Ticket")
-            ticket.event = self.event
-            ticket.booking = self.name
-            ticket.attendee_name = attendee.full_name
-            ticket.ticket_type = attendee.ticket_type
-            ticket.insert()
-    
+	def generate_qr_code(self):
+		import io
+
+		import qrcode
+
+		img = qrcode.make(f"{self.name}")
+		output = io.BytesIO()
+		img.save(output, format="PNG")
+		hex_data = output.getvalue()
+
+		qr_code_file = frappe.get_doc(
+			{
+				"doctype": "File",
+				"content": hex_data,
+				"attached_to_doctype": "Event Ticket",
+				"attached_to_name": self.name,
+				"attached_to_field": "qr_code",
+				"file_name": f"ticket-qr-code-{self.name}.png",
+			}
+		).save()
+
+		self.qr_code = qr_code_file.file_url

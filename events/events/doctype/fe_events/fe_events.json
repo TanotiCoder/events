@@ -166,6 +166,11 @@
   },
   {
    "group": "Ticketing",
+   "link_doctype": "Ticket Add-on",
+   "link_fieldname": "event"
+  },
+  {
+   "group": "Ticketing",
    "link_doctype": "Event Ticket",
    "link_fieldname": "event"
   },
@@ -180,7 +185,7 @@
    "link_fieldname": "event"
   }
  ],
- "modified": "2026-05-29 22:40:10.587375",
+ "modified": "2026-05-29 23:51:55.697502",
  "modified_by": "Administrator",
  "module": "Events",
  "name": "FE Events",

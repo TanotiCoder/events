@@ -7,16 +7,17 @@
  "field_order": [
   "title",
   "price",
+  "currency",
   "column_break_nmcf",
-  "event",
-  "currency"
+  "event"
  ],
  "fields": [
   {
    "description": "VIP, Early Bird",
    "fieldname": "title",
    "fieldtype": "Data",
-   "label": "Title"
+   "label": "Title",
+   "reqd": 1
   },
   {
    "fieldname": "column_break_nmcf",
@@ -31,6 +32,7 @@
    "reqd": 1
   },
   {
+   "allow_in_quick_entry": 1,
    "default": "0",
    "fieldname": "price",
    "fieldtype": "Currency",
@@ -43,13 +45,14 @@
    "fieldname": "currency",
    "fieldtype": "Link",
    "label": "Currency",
-   "options": "Currency"
+   "options": "Currency",
+   "reqd": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-05-29 22:48:04.160803",
+ "modified": "2026-05-29 23:35:07.977924",
  "modified_by": "Administrator",
  "module": "Ticketing",
  "name": "Event Ticket Type",
